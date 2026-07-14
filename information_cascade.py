@@ -93,7 +93,7 @@ def simulate_information_cascade(n, p, q, seed=None):
 #monte carlo simulation to pull data from N trials 
 n = 50
 p = 0.5
-q = 0.55
+q = 0.7
 N = 1000
 correct_cascades = 0
 incorrect_cascades = 0
@@ -109,8 +109,8 @@ for x in range(N):
             incorrect_cascades += 1
 
 cascade_prob = (correct_cascades + incorrect_cascades) / N
-correct_prob = correct_cascades / (correct_cascades + incorrect_cascades) if cascade_prob > 0 else None
-avg_cascade_start = np.mean(cascade_start_steps) if cascade_prob > 0 else None
+correct_prob = correct_cascades / (correct_cascades + incorrect_cascades) if cascade_prob > 0 else 0
+avg_cascade_start = np.mean(cascade_start_steps) if cascade_prob > 0 else 0
 
 print(f"Probability of a cascade occurring is {cascade_prob:.2%}")
 print(f"Proabibilty that a cascade is correct is {correct_prob:.2%}")
