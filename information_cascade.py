@@ -4,7 +4,7 @@ import random
 import matplotlib.pyplot as plt
 
 '''
-This program simulates a sequential Bayesian information cascade. 
+This program simulates a sequential simply binary information cascade. 
 We assume each individual chooses to accept or reject an option, which has an unknown binary state: good or bad. 
 Before deciding, each individual receives a private, imperfect signal about the state, and also observes the actions of everyone who has decided before them.
 '''
